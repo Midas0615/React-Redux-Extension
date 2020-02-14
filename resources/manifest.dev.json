@@ -1,0 +1,54 @@
+{
+  "manifest_version": 2,
+  "name": "HappyWallet-Dev",
+  "description": "HappyWallet chrome extension",
+  "version": "0.0.0.12",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "HappyWallet"
+  },
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "injector-chrome.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "*.woff",
+    "*.woff2",
+    "*.ttf",
+    "*.eot",
+    "*.svg"
+  ],
+  "permissions": [
+    "identity",
+    "identity.email",
+    "storage",
+    "activeTab",
+    "http://localhost:8080/",
+    "*://*.facebook.com/",
+    "*://*.chromiumapp.org/"
+  ],
+  "oauth2": {
+    "client_id": "673899312827-vjodbh3nl9kqqopu4g0lja79mhe1b846.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  }
+}

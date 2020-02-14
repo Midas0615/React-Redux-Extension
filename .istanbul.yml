@@ -1,0 +1,9 @@
+verbose: false
+instrumentation:
+    root: .
+    excludes: ['**/vendor/**']
+reporting:
+    print: summary
+    reports:
+        - lcov
+    dir: ./coverage

@@ -1,0 +1,22 @@
+{
+  "presets": [
+    "es2015",
+    "stage-0"
+  ],
+  "plugins": [
+    "transform-runtime",
+    "transform-class-properties",
+    "transform-decorators-legacy",
+    "transform-function-bind",
+    "transform-object-assign",
+    "transform-async-to-generator",
+    "transform-react-jsx"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "rewire"
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "globals": {
+    "describe": true,
+    "xdescribe": true,
+    "it": true,
+    "xit": true,
+    "beforeEach": true,
+    "afterEach": true,
+    "jsdom": true,
+    "expect": true,
+    "assert": true,
+    "simulant": true,
+    "mount": true,
+    "shallow": true,
+    "render": true,
+    "chrome": true,
+    "sinon": true
+  },
+  "rules": {
+    "max-len": [
+      "error", {
+        "code": 80,
+        "ignorePattern": "^(it\\()*",
+        "ignoreComments": true,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true
+      }
+    ],
+    "no-unused-expressions": 0,
+    "no-underscore-dangle": [
+      "error", {
+        "allow": ["__Rewire__", "__ResetDependency__"]
+      }
+    ],
+    "react/jsx-filename-extension": 0
+  }
+}

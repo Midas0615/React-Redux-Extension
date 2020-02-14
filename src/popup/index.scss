@@ -1,0 +1,27 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 350px;
+  min-height: 400px;
+  margin: 0;
+  line-height: 24px;
+  font-family: "Helvetica Neue", "Lucida Grande", sans-serif;
+}
+
+pre {
+  padding: 5px;
+  border: #95e6a7 1px solid;
+  background-color: #defbec;
+  font-family: "Helvetica Neue", "Lucida Grande", sans-serif;
+  white-space: nowrap;
+}
+
+button {
+  &[disabled] {
+    opacity: 0.5;
+  }
+}
